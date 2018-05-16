@@ -14,6 +14,7 @@ ags.add_argument('--max_index', type=int, default=100)
 args = ags.parse_args()
 
 ts = utils.read_pickle(args.input)
+non_zeros = {}
 for t in range(46):    
     all_series = []
     i = 0
@@ -27,7 +28,6 @@ for t in range(46):
     all_series = np.transpose(all_series)
  
     max_i = len(all_series)
-    non_zeros = {}
     for i in range(max_i):
         if i%args.max_index != args.index:
             continue
