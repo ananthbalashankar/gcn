@@ -28,7 +28,7 @@ for t in range(46):
     max_i = len(all_series)
     all_arrays = []
     for i in range(max_i):
-        all_arrays += [all_series['G{0}_{1}'.format(i, t)]]
+        all_arrays += [all_series['G{0}_{1}'.format(i+1, t)]]
     all_series = np.transpose(all_arrays)
     for i in range(max_i):
         if i%args.max_index != args.index:
