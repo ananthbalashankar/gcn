@@ -16,7 +16,7 @@ args = ags.parse_args()
 ts = utils.read_pickle(args.input)
 non_zeros = {}
 for t in range(46):    
-    all_series = []
+    all_series = {}
     i = 0
     index = {}
     for k, v in ts.iteritems():
