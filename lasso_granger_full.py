@@ -27,7 +27,7 @@ for t in range(46):
         i+=1
     all_series = np.transpose(all_series)
  
-    max_i = len(all_series)
+    max_i = len(all_series.columns.values)
     for i in range(max_i):
         if i%args.max_index != args.index:
             continue
