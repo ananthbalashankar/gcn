@@ -22,11 +22,14 @@ for t in range(46):
     for k, v in ts.iteritems():
         if k.endswith('_{0}'.format(t)) == False:
             continue
-        all_series += [v]
+        all_series[k] = v
         index[i] = k
         i+=1
     max_i = len(all_series)
-    all_series = np.transpose(all_series)
+    all_arrays = []
+    for i in range(max_i):
+        all_arrays += [all_series['G{0}_{1}'.format(i, t)]]
+    all_series = np.transpose(all_arrays)
     for i in range(max_i):
         if i%args.max_index != args.index:
             continue
