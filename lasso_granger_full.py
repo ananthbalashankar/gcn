@@ -20,7 +20,7 @@ for t in range(46):
     i = 0
     index = {}
     for k, v in ts.iteritems():
-        if '_{0}'.format(t) not in k:
+        if k.endswith('_{0}'.format(t)) == False:
             continue
         all_series += [v]
         index[i] = k
