@@ -5,4 +5,4 @@ def write_pickle(d, path):
 
 def read_pickle(path):
     with open(path, 'rb') as fp:
-        return pickle.load(fp, encoding='latin1')
+        return pickle.load(fp)
