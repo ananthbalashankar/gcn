@@ -45,7 +45,7 @@ for t in range(46):
         coeff_names = {}
         for k, v in coeff.iteritems():
             coeff_names[k] = index[k] 
-        non_zeros[(t, i)] = (error, coeff, coeff_names, top10_vars)
+        non_zeros[(t, i)] = (error, coeff, coeff_names, best_vars)
     
 utils.write_pickle(non_zeros, '{0}/{0}_{1}'.format(args.output, args.index))
 
